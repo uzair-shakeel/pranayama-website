@@ -1,0 +1,72 @@
+import Image from "next/image"
+import Link from "next/link"
+import {  ArrowRight, Check } from "lucide-react"
+
+export default function Optimize() {
+  return (
+    <main className="min-h-screen">
+      {/* Optimization Section */}
+      <section className="py-20 ">
+        <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif text-center mb-4">Optimiza Tu Respiración</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Para quienes buscan un enfoque más individualizado y una transformación profunda en su manera de respirar,
+            vivir y sentir.
+          </p>
+          <div className="grid lg:grid-cols-2 gap-12">
+            
+            <div className="p-6 rounded-3xl border-[2px] border-[#D1D1D1]">
+
+            <div className="rounded-3xl overflow-hidden max-h-[300px] w-full">
+              <Image
+                src="/images/optimization.jpeg"
+                alt="Person meditating"
+                width={600}
+                height={400}
+                className="w-full object-cover max-h-[300px] w-full"
+              />
+            </div>
+            <h4 className="text-[32px] leading-[48px]">¿Quieres transformar tu bienestar? </h4>
+            <h4 className="text-[20px] ">Además de nuestras sesiones grupales, estamos desarrollando un programa exclusivo diseñado para ayudarte a respirar mejor y optimizar tu energía en solo 15 días. </h4>
+            </div>
+            <div className="space-y-6 flex flex-col justify-between">
+              {[
+                "Seguimiento personalizado durante 15 días para asegurarnos de tu progreso.",
+                "Documentación del proceso, permitiéndote hacer de la respiración una herramienta de bienestar permanente.",
+                "Dos sesiones en vivo donde recibirás orientación directa y podrás resolver dudas en tiempo real.",
+                "Videos pregrabados con información clave sobre técnicas de respiración y su impacto en tu bienestar.",
+                "Retos progresivos diseñados para que mejores tu respiración de manera natural y sostenible.",
+              ].map((item, index) => (
+                <div key={index} className="flex gap-4 items-start">
+                  <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center flex-shrink-0">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-gray-600">{item}</p>
+                </div>
+              ))}
+              <button className="border-2 text-xl border-[#222222] px-8 py-5 rounded-lg w-full flex justify-between">
+                Preordena Ahora
+                <span 
+                    className={`transform transition-transform border-2 border-[#2A2A2A] rounded-full duration-300 ease-in-out `}
+                  >
+                    <svg 
+                      width="24" 
+                      height="24" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2"
+                      className="transform transition-transform duration-300"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+
