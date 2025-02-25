@@ -4,7 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import "aos/dist/aos.css";
 
-export const myFont = localFont({
+const myFont = localFont({
   src: "../../public/fonts/TAN-NIMBUS.woff2",
   variable: "--font-nimbus",
 });
@@ -20,8 +20,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
-
   return (
     <html lang="es" className={`${myFont.variable} ${GeistSans.className}`}>
       <head>
