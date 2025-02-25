@@ -36,7 +36,7 @@ export default function FAQ() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto space-y-3">
           {faqs.map((faq, index) => (
-            <div key={index} className="overflow-hidden">
+            <div data-aos="fade-up" key={index} className="overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full  rounded-2xl px-6 py-4 text-left transition-all duration-300 ease-in-out border-[#2A2A2A] border-2"

@@ -41,12 +41,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-12 lg:py-20 ">
+    <section className="py-12 lg:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal  text-center mb-4">
+        <h2
+          data-aos="fade-up"
+          className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal  text-center mb-4"
+        >
           Testimonios
         </h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p
+          data-aos="fade-up"
+          className="text-gray-600 text-center mb-12 max-w-2xl mx-auto"
+        >
           Nada habla mejor de los resultados que las experiencias de quienes han
           participado en nuestros programas.
         </p>
@@ -54,6 +60,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
+              data-aos="fade-up"
               className=" flex flex-col lg:flex-row border-2 border-[#D1D1D1] items-centerflex items-center gap-8 p-6 rounded-xl shadow-sm"
             >
               <Image

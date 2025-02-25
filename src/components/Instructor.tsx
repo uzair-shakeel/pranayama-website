@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Instructor() {
   return (
-    <section className="py-12 lg:py-20 ">
+    <section className="py-12 lg:py-20" data-aos="fade-up">
       <div className="container mx-auto px-4">
         <h2 className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal text-center mb-4">
           Sobre Nuestro Instructor

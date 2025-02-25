@@ -7,7 +7,10 @@ export default function About() {
   return (
     <section className="py-12 lg:py-24 ">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center lg:text-start">
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col lg:flex-row justify-between items-center mb-12"
+        >
           <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <div className="hidden lg:flex gap-3 flex-wrap mb-8">
               {navigationItems.map((item) => (
@@ -42,7 +45,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] overflow-hidden">
+        <div data-aos="fade-up" className="rounded-[2rem] overflow-hidden">
           <Image
             src="/images/somos_bg.jpeg"
             alt="Grupo Pranayama"

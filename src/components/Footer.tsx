@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#1a2721] text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid justify-center text-center lg:text-start items-center md:grid-cols-4 gap-8">
           <div>
             <Image
               src="/images/logo.png"
               alt="Pranayama Logo"
               width={120}
-              height={40}
+              height={120}
               className="mb-6"
             />
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-semibold mb-4">Redes Sociales</h4>
-            <div className="space-y-2">
+            <div className="space-y-2 flex flex-col items-center lg:items-start">
               <div className="flex items-center space-x-4">
                 <a href="#" className="hover:text-gray-300">
                   <Image

@@ -6,16 +6,22 @@ export default function Optimize() {
   return (
     <main className="min-h-screen">
       {/* Optimization Section */}
-      <section className="py-12 lg:py-20 ">
+      <section className="py-12 lg:py-20">
         <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <h2 className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal font-serif text-center mb-4">
+          <h2
+            data-aos="fade-up"
+            className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal font-serif text-center mb-4"
+          >
             Optimiza Tu Respiración
           </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p
+            data-aos="fade-up"
+            className="text-center text-gray-600 mb-12 max-w-3xl mx-auto"
+          >
             Para quienes buscan un enfoque más individualizado y una
             transformación profunda en su manera de respirar, vivir y sentir.
           </p>
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div data-aos="fade-up" className="grid lg:grid-cols-2 gap-12">
             <div className="p-6 rounded-3xl border-[2px] border-[#D1D1D1]">
               <div className="rounded-3xl overflow-hidden max-h-[300px] w-full">
                 <Image

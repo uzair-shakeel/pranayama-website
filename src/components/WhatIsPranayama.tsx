@@ -102,7 +102,10 @@ export default function WhatIsPranayama() {
   return (
     <section className="py-12 lg:py-24">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center lg:text-start ">
-        <div className="grid lg:grid-cols-3 gap-12 items-start mb-16">
+        <div
+          data-aos="fade-up"
+          className="grid lg:grid-cols-3 gap-12 items-start mb-16"
+        >
           <div>
             <h2 className="text-[2.75rem] font-serif mb-4">
               ¿Qué es Pranayama?
@@ -134,7 +137,10 @@ export default function WhatIsPranayama() {
           </div>
         </div>
 
-        <div className="flex w-full justify-between items-start">
+        <div
+          data-aos="fade-up"
+          className="flex w-full justify-between items-start"
+        >
           <div className="flex flex-nowrap gap-3 justify-start mb-16 overflow-x-auto whitespace-nowrap">
             {navigationItems.map((item) => (
               <button
@@ -162,7 +168,10 @@ export default function WhatIsPranayama() {
           </button>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6  lg:h-[450px]">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col lg:flex-row gap-6  lg:h-[450px]"
+        >
           {tabContent[activeTab as keyof typeof tabContent].map((card) => {
             const isSelected = selectedCard === card.title;
 

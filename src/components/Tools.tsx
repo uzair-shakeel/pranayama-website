@@ -24,9 +24,9 @@ const tools = [
 
 export default function Tools() {
   return (
-    <section className="py-24 ">
+    <section className="py-24">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div data-aos="fade-up" className="text-center mb-16">
           <h2 className="text-[40px] lg:text-[2.75rem] leading-[45px] lg:leading-normal font-serif mb-4">
             Herramientas para tu bienestar
           </h2>
@@ -36,7 +36,7 @@ export default function Tools() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div data-aos="fade-up" className="grid md:grid-cols-3 gap-6">
           {tools.map((tool, index) => (
             <div
               key={tool.title}

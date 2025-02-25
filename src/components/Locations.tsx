@@ -38,14 +38,17 @@ export default function Locations() {
     <section className="py-24">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row text-center lg:text-start justify-between items-start mb-16">
-          <div className="max-w-xl order-2 lg:order-1">
+          <div data-aos="fade-up" className="max-w-xl order-2 lg:order-1">
             <p className="text-gray-600 mb-4">
               A lo largo del tiempo, hemos llevado la magia del Pranayama a
               distintos espacios, creando experiencias transformadoras en cada
               encuentro.
             </p>
           </div>
-          <h2 className="text-[40px] mx-auto lg:text-[2.75rem]  lg:text-start leading-[45px] lg:leading-normal font-serif text-right">
+          <h2
+            data-aos="fade-up"
+            className="text-[40px] mx-auto lg:text-[2.75rem]  lg:text-start leading-[45px] lg:leading-normal font-serif text-right"
+          >
             Nuestros
             <br />
             Encuentros
@@ -53,7 +56,7 @@ export default function Locations() {
         </div>
 
         <div className="grid gap-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div data-aos="fade-up" className="grid md:grid-cols-2 gap-6">
             {locations.slice(0, 2).map((location) => (
               <div
                 key={location.name}
@@ -83,7 +86,10 @@ export default function Locations() {
           </div>
 
           {/* Full width image */}
-          <div className="relative rounded-[2rem] overflow-hidden group">
+          <div
+            data-aos="fade-up"
+            className="relative rounded-[2rem] overflow-hidden group"
+          >
             <Image
               src={locations[2].image || "/placeholder.svg"}
               alt={locations[2].name}
@@ -105,7 +111,7 @@ export default function Locations() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div data-aos="fade-up" className="grid md:grid-cols-2 gap-6">
             {locations.slice(3).map((location) => (
               <div
                 key={location.name}

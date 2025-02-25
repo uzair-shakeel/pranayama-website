@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import localFont from "next/font/local";
+import "aos/dist/aos.css";
 
 export const myFont = localFont({
   src: "../../public/fonts/TAN-NIMBUS.woff2",
-  variable: "--font-nimbus", 
+  variable: "--font-nimbus",
 });
-
 
 export const metadata: Metadata = {
   title: "Pranayama - Encuentra calma en cada respiro",
-  description: "Aprende técnicas de respiración para mejorar tu energía, reducir el estrés y aumentar tu concentración.",
+  description:
+    "Aprende técnicas de respiración para mejorar tu energía, reducir el estrés y aumentar tu concentración.",
 };
 
 export default function RootLayout({
@@ -19,6 +20,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
+
   return (
     <html lang="es" className={`${myFont.variable} ${GeistSans.className}`}>
       <head>
