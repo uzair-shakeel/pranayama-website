@@ -16,7 +16,7 @@ import About from '@/components/About';
 export default function Home() {
   return (
     <div className="min-h-screen ">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <WhatIsPranayama />
       <About />

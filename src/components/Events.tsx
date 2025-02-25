@@ -1,24 +1,29 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 const events = [
   {
-    date: { day: 9, month: 'FEB' },
-    title: 'Sesión de Pranayama - Batsú, Candelaria, Palmares',
-    image: '/images/events/event-1.jpg',
-    buttonText: 'GUARDAR ESPACIO'
+    date: { day: 9, month: "FEB" },
+    title: "Sesión de Pranayama - Batsú, Candelaria, Palmares",
+    image: "/images/events/event-1.jpg",
+    image2: "/images/events/event-1b.jpg",
+    buttonText: "GUARDAR ESPACIO",
   },
   {
-    date: { day: 12, month: 'FEB' },
+    date: { day: 12, month: "FEB" },
     title: 'Sesión en Grupo: "Libera tu Mente"',
-    image: '/images/events/event-2.jpg',
-    buttonText: 'COMPRAR ENTRADAS'
+    image: "/images/events/event-2.jpg",
+    image2: "/images/events/event-1b.jpg",
+
+    buttonText: "COMPRAR ENTRADAS",
   },
   {
-    date: { day: 23, month: 'FEB' },
-    title: 'Sesión de Respiración - Esfera, Alajuela',
-    image: '/images/events/event-3.jpg',
-    buttonText: 'GUARDAR ESPACIO'
-  }
+    date: { day: 23, month: "FEB" },
+    title: "Sesión de Respiración - Esfera, Alajuela",
+    image: "/images/events/event-3.jpg",
+    image2: "/images/events/event-1b.jpg",
+
+    buttonText: "GUARDAR ESPACIO",
+  },
 ];
 
 export default function Events() {
