@@ -189,7 +189,7 @@ export default function WhatIsPranayama() {
                       : activeTab === "Enfoque" || activeTab === "Precauciones"
                       ? " lg:w-[75%]"
                       : "")
-                  : "w-[85%] lg:w-[25%]" +
+                  : "w-full lg:w-[25%]" +
                     (activeTab === "Clases"
                       ? " lg:w-[28%]" // Changed from 33% to 23%
                       : activeTab === "Enfoque" || activeTab === "Precauciones"
