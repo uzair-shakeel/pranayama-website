@@ -1,50 +1,19 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const heroRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsScrolled(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-      }
-    );
-
-    // Assuming the hero section has an id of "hero"
-    const heroSection = document.getElementById("hero");
-    if (heroSection) {
-      observer.observe(heroSection);
-    }
-
-    return () => {
-      if (heroSection) {
-        observer.unobserve(heroSection);
-      }
-    };
-  }, []);
-
   return (
     <>
       {/* Navbar - Always on Top */}
-      <nav
-        className={`fixed w-full text-white z-50 transition-colors duration-300 ${
-          isScrolled ? "bg-black/30 backdrop-blur-sm" : "bg-transparent"
-        }`}
-      >
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center relative">
+      <nav className="absolute w-full text-white z-50 bg-transparent">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center relative">
           {/* Logo */}
-          <a href="#" className="text-xl md:hidden sm:text-2xl font-semibold">
+          <a href="#" className="text-xl sm:text-2xl font-semibold">
             Pranayama
           </a>
 
@@ -72,33 +41,75 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="space-x-4 hidden md:block">
+          {/* <div className="hidden md:flex space-x-6 lg:space-x-8">
+            <a href="#" className="hover:text-gray-200 text-sm lg:text-base">
+              Tienda
+            </a>
+            <a href="#" className="hover:text-gray-200 text-sm lg:text-base">
+              Servicios
+            </a>
+            <a href="#" className="hover:text-gray-200 text-sm lg:text-base">
+              Tips
+            </a>
+            <a href="#" className="hover:text-gray-200 text-sm lg:text-base">
+              Contacto
+            </a>
+            <a href="#" className="hover:text-gray-200 text-sm lg:text-base">
+              Sobre Nosotros
+            </a>
+          </div> */}
+
+          <div className="space-x-4">
             <ScrollLink
-              to="Pranayama"
+              to="hero"
               smooth={true}
               duration={500}
               className="cursor-pointer"
             >
-              Pranayama
+              Home
             </ScrollLink>
             <ScrollLink
-              to="Programa"
+              to="what-is-pranayama"
               smooth={true}
               duration={500}
               className="cursor-pointer"
             >
-              Programa
+              What is Pranayama
             </ScrollLink>
             <ScrollLink
-              to="Eventos"
+              to="about"
               smooth={true}
               duration={500}
               className="cursor-pointer"
             >
-              Eventos
+              About
             </ScrollLink>
             <ScrollLink
-              to="Instructor"
+              to="optimize"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              Optimize
+            </ScrollLink>
+            <ScrollLink
+              to="locations"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              Locations
+            </ScrollLink>
+            <ScrollLink
+              to="tools"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              Tools
+            </ScrollLink>
+            <ScrollLink
+              to="instructor"
               smooth={true}
               duration={500}
               className="cursor-pointer"
@@ -106,22 +117,33 @@ export default function Navbar() {
               Instructor
             </ScrollLink>
             <ScrollLink
-              to="Testimonios"
+              to="events"
               smooth={true}
               duration={500}
               className="cursor-pointer"
             >
-              Testimonios
+              Events
+            </ScrollLink>
+            <ScrollLink
+              to="testimonials"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              Testimonials
+            </ScrollLink>
+            <ScrollLink
+              to="faq"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              FAQ
             </ScrollLink>
           </div>
           {/* Reserve Button (Desktop) */}
-          <ScrollLink
-            to="events"
-            className="hidden md:block"
-            smooth={true}
-            duration={500}
-          >
-            <button className=" border border-white text-white hover:bg-[#7B8E6A] hover:border-[#7B8E6A] duration-200 px-6 lg:px-8 py-2 lg:py-3 rounded-full text-sm lg:text-base">
+          <ScrollLink to="events" smooth={true} duration={500}>
+            <button className="hidden md:block border border-white text-white hover:bg-[#7B8E6A] hover:border-[#7B8E6A] duration-200 px-6 lg:px-8 py-2 lg:py-3 rounded-full text-sm lg:text-base">
               Reservar Sesión
             </button>
           </ScrollLink>
@@ -137,54 +159,24 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 py-16 px-4">
-          <ScrollLink
-            to="Pranayama"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button onClick={toggleMenu}>Pranayama</button>
-          </ScrollLink>
-          <ScrollLink
-            to="Programa"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button onClick={toggleMenu}>Programa</button>
-          </ScrollLink>
-          <ScrollLink
-            to="Eventos"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button onClick={toggleMenu}>Eventos</button>
-          </ScrollLink>
-          <ScrollLink
-            to="Instructor"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button onClick={toggleMenu}>Instructor</button>
-          </ScrollLink>
-          <ScrollLink
-            to="Testimonios"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer"
-          >
-            <button onClick={toggleMenu}>Testimonios</button>
-          </ScrollLink>
-          <ScrollLink to="events" smooth={true} duration={500}>
-            <button
-              onClick={toggleMenu}
-              className="border border-white text-white hover:bg-[#7B8E6A] hover:border-[#7B8E6A] duration-200 px-6 py-2 rounded-full text-sm"
-            >
-              Reservar Sesión
-            </button>
-          </ScrollLink>
+          <a href="#" className="hover:text-gray-200 text-lg">
+            Tienda
+          </a>
+          <a href="#" className="hover:text-gray-200 text-lg">
+            Servicios
+          </a>
+          <a href="#" className="hover:text-gray-200 text-lg">
+            Tips
+          </a>
+          <a href="#" className="hover:text-gray-200 text-lg">
+            Contacto
+          </a>
+          <a href="#" className="hover:text-gray-200 text-lg">
+            Sobre Nosotros
+          </a>
+          <button className="border border-white text-white hover:bg-[#EBEBEB] hover:text-black duration-200 px-6 py-2 rounded-full text-lg w-full max-w-xs">
+            Reservar Sesión
+          </button>
         </div>
       </div>
     </>
