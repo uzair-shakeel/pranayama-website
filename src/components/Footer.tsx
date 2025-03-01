@@ -58,7 +58,11 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Redes Sociales</h4>
             <div className="space-y-2 flex flex-col items-center lg:items-start">
               <div className="flex items-center space-x-4">
-                <a href="#" className="hover:text-gray-300">
+                <a
+                  href="/https://www.instagram.com/pranayamacostarica"
+                  className="hover:text-gray-300"
+                  target="_blank"
+                >
                   <Image
                     src="/images/icons/instagram.svg"
                     alt="Instagram"
@@ -69,6 +73,22 @@ export default function Footer() {
                 <p>Instagram</p>
               </div>
               <div className="flex items-center space-x-4">
+                <a
+                  href="https://wa.link/1967vo"
+                  className="hover:text-gray-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/icons/whatsApp.svg"
+                    alt="WhatsApp"
+                    width={24}
+                    height={24}
+                  />
+                </a>
+                <p>WhatsApp</p>
+              </div>
+              {/* <div className="flex items-center space-x-4">
                 <a href="#" className="hover:text-gray-300">
                   <Image
                     src="/images/icons/facebook.svg"
@@ -89,7 +109,7 @@ export default function Footer() {
                   />
                 </a>
                 <p>Tiktok</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

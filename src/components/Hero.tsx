@@ -1,3 +1,5 @@
+import { Link as ScrollLink } from "react-scroll";
+
 export default function Hero() {
   return (
     <section className="relative h-screen text-center lg:text-start">
@@ -18,6 +20,11 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 h-full flex items-center relative z-10">
         <div className="max-w-2xl text-white">
+          <img
+            src="/images/logo.png"
+            alt=""
+            className="h-[120px] w-[120px] m-4"
+          />
           <h1
             data-aos="fade-up"
             className="text-[35px] lg:text-5xl md:text-6xl mb-6"
@@ -32,12 +39,17 @@ export default function Hero() {
             data-aos="fade-up"
             className="flex lg:flex-row flex-col justify-center lg:justify-start items-center gap-4 mt-8"
           >
-            <button className="bg-[#EBEBEB] w-fit duration-200 text-black px-8 py-3 rounded-full hover:bg-[#7B8E6A] hover:border-[#7B8E6A] hover:text-white">
-              Comienza tu viaje
-            </button>
-            <button className="border border-white w-fit text-white px-8 py-3 rounded-full hover:bg-[#EBEBEB] hover:text-black duration-200">
-              Conoce Más
-            </button>
+            <ScrollLink to="Programa" smooth={true} duration={500}>
+              <button className="bg-[#EBEBEB] w-fit duration-200 text-black px-8 py-3 rounded-full hover:bg-[#7B8E6A] hover:border-[#7B8E6A] hover:text-white">
+                Preordena mi programa
+              </button>
+            </ScrollLink>
+
+            <ScrollLink to="events" smooth={true} duration={500}>
+              <button className="border border-white w-fit text-white px-8 py-3 rounded-full hover:bg-[#7B8E6A] hover:border-[#7B8E6A] duration-200">
+                Conoce Más
+              </button>
+            </ScrollLink>
           </div>
           <div
             data-aos="fade-up"

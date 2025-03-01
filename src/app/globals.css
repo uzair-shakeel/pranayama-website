@@ -13,6 +13,15 @@ body {
   background: var(--background);
 }
 
+/* Ensure this is at the root of your CSS */
+:root {
+  --font-nimbus: "TAN-NIMBUS", sans-serif;
+}
+
+html, body {
+  font-family: "Montserrat", var(--font-nimbus), "Marcellus", sans-serif;
+}
+
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;

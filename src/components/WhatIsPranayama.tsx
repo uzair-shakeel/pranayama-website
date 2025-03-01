@@ -3,6 +3,7 @@
 import { Play } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const navigationItems = ["Beneficios", "Enfoque", "Clases", "Precauciones"];
 
@@ -156,16 +157,17 @@ export default function WhatIsPranayama() {
               </button>
             ))}
           </div>
-          <button
-            onClick={() => setIsSelected(!isSelected)}
-            className={`px-6 py-2.5 hidden lg:block rounded-full transition-colors ${
-              isSelected
-                ? "bg-[#7B8E6A] text-white"
-                : "border-2 border-[#2B2B2B] hover:bg-[#7B8E6A] hover:border-[#7B8E6A] hover:text-white duration-200 text-[#2B2B2B]"
-            }`}
-          >
-            Conocer Más
-          </button>
+          <ScrollLink to="Programa" smooth={true} duration={500}>
+            <button
+              className={`px-6 py-2.5 hidden lg:block rounded-full transition-colors ${
+                isSelected
+                  ? "bg-[#7B8E6A] text-white"
+                  : "border-2 border-[#2B2B2B] hover:bg-[#7B8E6A] hover:border-[#7B8E6A] hover:text-white duration-200 text-[#2B2B2B]"
+              }`}
+            >
+              Conoce Más
+            </button>
+          </ScrollLink>
         </div>
 
         <div

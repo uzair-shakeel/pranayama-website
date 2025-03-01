@@ -56,11 +56,12 @@ export default function Optimize() {
                   <p className="text-gray-600">{item}</p>
                 </div>
               ))}
-              <button className="border-2 text-xl border-[#222222] hover:bg-[#222222] group duration-200 hover:text-white px-8 py-5 rounded-lg w-full flex justify-between">
+              <button
+                onClick={() => window.open("https://wa.link/1967vo", "_blank")}
+                className="border-2 text-xl border-[#222222] hover:bg-[#222222] group duration-200 hover:text-white px-8 py-5 rounded-lg w-full flex justify-between"
+              >
                 Preordena Ahora
-                <span
-                  className={`transform transition-transform border-2 border-[#2A2A2A] group-hover:border-white  rounded-full duration-200 ease-in-out `}
-                >
+                <span className="transform font-serif transition-transform border-2 border-[#2A2A2A] group-hover:border-white rounded-full duration-200 ease-in-out">
                   <svg
                     width="24"
                     height="24"
