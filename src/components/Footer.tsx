@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -18,19 +19,18 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Información</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-300">
-                  Sobre Nosotros
-                </a>
+                <ScrollLink to="about" smooth={true} duration={500}>
+                  <a href="#" className="hover:text-gray-300">
+                    Sobre Nosotros
+                  </a>
+                </ScrollLink>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
-                  Qué es Pranayama
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gray-300">
-                  Tips & Preguntas
-                </a>
+                <ScrollLink to="Pranayama" smooth={true} duration={500}>
+                  <a href="#" className="hover:text-gray-300">
+                    Qué es Pranayama
+                  </a>
+                </ScrollLink>
               </li>
             </ul>
           </div>
@@ -38,19 +38,25 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-gray-300">
-                  Sesiones Personalizadas
-                </a>
+                <ScrollLink to="Programa" smooth={true} duration={500}>
+                  <a href="#" className="hover:text-gray-300">
+                    Sesiones Personalizadas
+                  </a>
+                </ScrollLink>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
-                  Clases & Eventos
-                </a>
+                <ScrollLink to="events" smooth={true} duration={500}>
+                  <a href="#" className="hover:text-gray-300">
+                    Clases & Eventos
+                  </a>
+                </ScrollLink>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300">
-                  Productos
-                </a>
+                <ScrollLink to="tools" smooth={true} duration={500}>
+                  <a href="#" className="hover:text-gray-300">
+                    Productos
+                  </a>
+                </ScrollLink>
               </li>
             </ul>
           </div>
