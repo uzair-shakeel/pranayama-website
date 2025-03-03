@@ -86,6 +86,48 @@ export default function Navbar() {
           </ScrollLink>
         </div>
       </nav>
+      {/* Mobile Menu - Below Navbar */}
+      <div
+        className={`md:hidden fixed inset-0 bg-[#1a2721] text-white transform transition-all duration-300 ease-in-out z-40 ${
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col  md:hidden space-y-8 justify-center items-center h-full">
+          {[
+            "Pranayama",
+            "Programa",
+            "Eventos",
+            "Instructor",
+            "Testimonios",
+          ].map((item) => (
+            <ScrollLink
+              key={item}
+              to={item}
+              onClick={toggleMenu}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer"
+            >
+              {item}
+            </ScrollLink>
+          ))}
+          <ScrollLink
+            to="events"
+            smooth={true}
+            duration={500}
+            className="md:hidden"
+          >
+            <button
+              onClick={toggleMenu}
+              className="border border-white text-white hover:bg-[#7B8E6A] hover:border-[#7B8E6A] duration-200 px-6 lg:px-8 py-2 lg:py-3 rounded-full text-sm lg:text-base"
+            >
+              Reservar Sesión
+            </button>
+          </ScrollLink>
+        </div>
+      </div>
     </>
   );
 }
