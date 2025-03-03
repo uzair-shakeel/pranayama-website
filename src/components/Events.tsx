@@ -1,6 +1,6 @@
 const Events = () => {
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent mx-4">
       <style>
         {`
           .elfsight-app-c6f6b73b-218a-4c42-9aa6-d92b80aff66d {

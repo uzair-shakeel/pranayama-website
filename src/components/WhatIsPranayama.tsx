@@ -88,8 +88,12 @@ const tabContent = {
   ],
 };
 
+const YOUTUBE_VIDEO_ID = "fG2uycHDGAo"; // Extracted from your YouTube link
+
 export default function WhatIsPranayama() {
   const [activeTab, setActiveTab] = useState("Beneficios");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [selectedCard, setSelectedCard] = useState(
     tabContent[activeTab as keyof typeof tabContent][0].title
   );
@@ -102,7 +106,7 @@ export default function WhatIsPranayama() {
 
   return (
     <section className="py-12 lg:py-24">
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center lg:text-start ">
+      <div className="px-4  lg:px-8 max-w-7xl mx-auto text-center lg:text-start ">
         <div
           data-aos="fade-up"
           className="grid lg:grid-cols-3 gap-12 items-start mb-16"
@@ -116,7 +120,10 @@ export default function WhatIsPranayama() {
             </p>
           </div>
 
-          <div className="relative aspect-[16/9] bg-black rounded-2xl overflow-hidden">
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="relative aspect-[16/9] bg-black rounded-2xl overflow-hidden"
+          >
             <img
               src="/images/video.jpeg"
               alt=""
@@ -244,6 +251,32 @@ export default function WhatIsPranayama() {
           })}
         </div>
       </div>
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="relative z-50 bg-white md:p-8 rounded-lg mx-4 shadow-lg max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          >
+            <button
+              className="absolute top-2 right-2 text-black font-bold text-2xl"
+              onClick={() => setIsModalOpen(false)}
+            >
+              ✕
+            </button>
+            <iframe
+              width="100%"
+              height="450"
+              src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1`}
+              title="Pranayama Video"
+              allow="autoplay; encrypted-media"
+              className="rounded-lg h-[250px] md:h-[450px]"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -47,7 +47,7 @@ export default function Locations() {
           </div>
           <h2
             data-aos="fade-up"
-            className="text-[40px] mx-auto lg:text-[2.75rem]  lg:text-start leading-[45px] lg:leading-normal font-serif text-right"
+            className="text-[40px] mx-auto lg:mx-0 text-center lg:text-[2.75rem]  lg:text-start leading-[45px] lg:leading-normal font-serif md:text-right"
           >
             Nuestros
             <br />

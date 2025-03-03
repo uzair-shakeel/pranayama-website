@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -16,8 +16,6 @@ import Tools from "@/components/Tools";
 import About from "@/components/About";
 
 export default function Home() {
-  const [showPopup, setShowPopup] = useState(true);
-
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);

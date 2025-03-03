@@ -23,7 +23,8 @@ export default function Hero() {
           <img
             src="/images/logo.png"
             alt=""
-            className="h-[120px] w-[120px] m-4"
+            data-aos="fade-up"
+            className="h-[120px] w-[120px] mx-auto md:mx-0 m-4"
           />
           <h1
             data-aos="fade-up"

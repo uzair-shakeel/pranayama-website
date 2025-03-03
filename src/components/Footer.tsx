@@ -11,7 +11,7 @@ export default function Footer() {
               alt="Pranayama Logo"
               width={120}
               height={120}
-              className="mb-6"
+              className="mb-6 mx-auto md:mx-0"
             />
           </div>
           <div>
